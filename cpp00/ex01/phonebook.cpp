@@ -6,7 +6,7 @@
 /*   By: gumendes <gumendes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/30 11:25:48 by gumendes          #+#    #+#             */
-/*   Updated: 2025/08/04 10:49:31 by gumendes         ###   ########.fr       */
+/*   Updated: 2025/08/04 14:05:11 by gumendes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 bool	validateName(std::string input)
 {
-	if (input.length() == 0)
+	if (input.empty())
 		return (false);
 	for (size_t i = 0; i < input.length(); i++)
 	{
@@ -26,7 +26,7 @@ bool	validateName(std::string input)
 
 bool	validatePNumber(std::string input)
 {
-	if (input.length() == 0)
+	if (input.empty())
 		return (false);
 	if (input.length() > 9)
 		return (false);
@@ -93,7 +93,7 @@ std::string	setNickName()
 	while (true)
 	{
 		if (std::getline(std::cin, tmp)) {
-			if (tmp.length() != 0)
+			if (tmp[0] != '\0')
 				return (tmp);
 			else
 			{
@@ -141,7 +141,7 @@ std::string	setDarkestSecret()
 	while (true)
 	{
 		if (std::getline(std::cin, tmp)) {
-			if (tmp.length() != 0)
+			if (tmp[0] != '\0')
 				return (tmp);
 			else
 			{
@@ -167,19 +167,26 @@ void setContact(PhoneBook& phoneBook)
 	std::string	darkestSecret;
 
 	std::cout << "What's your contact's first name?" << std::endl;
+	std::cout << "> ";
 	firstName = setFirstName();
 
 	std::cout << "What's your contact's last name?" << std::endl;
+	std::cout << "> ";
 	lastName = setLastName();
 
 	std::cout << "What's your contact's nickname?" << std::endl;
+	std::cout << "> ";
 	nickName = setNickName();
 
 	std::cout << "What's your contact's phone number?" << std::endl;
+	std::cout << "> ";
 	phoneNumber = setPhoneNumber();
 
 	std::cout << "What's your contact's darkest secret?" << std::endl;
+	std::cout << "> ";
 	darkestSecret = setDarkestSecret();
+
+	std::cout << std::endl;
 
 	Contact	newContact(firstName, lastName, nickName, phoneNumber, darkestSecret);
 	phoneBook.addContact(newContact);
@@ -190,19 +197,23 @@ void	expandSearch(PhoneBook& phoneBook)
 	std::string	buf;
 
 	std::cout << "Which contact would you like to see, press 0 if none." << std::endl;
+
 	std::cout << "> ";
+
 	std::getline(std::cin, buf);
 	if (std::cin.eof())
 	{
 		std::cout << RED << "You pressed ^D, burning the PhoneBook." << RESET << std::endl;
 		exit(1);
 	}
+
 	if (buf == "0")
 	{
 		std::cout << "\nExitng search mode." << std::endl;
 		return ;
 	}
-	for (size_t i = 0; i < buf.length(); i++)
+
+	for (size_t i = 0; i < phoneBook.getContactAmmount(); i++)
 	{
 		if (isalpha(buf[i]))
 		{
@@ -210,12 +221,14 @@ void	expandSearch(PhoneBook& phoneBook)
 			return ;
 		}
 	}
-	int index = std::atoi(buf.c_str());
+
+	size_t index = std::atoi(buf.c_str());
 	if (index <= 0 || index > phoneBook.getContactAmmount())
 	{
 		std::cout << "Contact number " << buf << " is out of bounds, exiting search mode." << std::endl;
 		return ;
 	}
+
 	phoneBook.printContactN(index);
 	std::cout << std::endl;
 }
@@ -228,6 +241,23 @@ Contact::Contact(std::string firstName, std::string lastName, std::string nickNa
 	this->nickName = nickName;
 	this->phoneNumber = phoneNumber;
 	this->darkestSecret = darkestSecret;
+}
+
+Contact::Contact()
+{
+}
+
+Contact::~Contact()
+{
+}
+
+PhoneBook::PhoneBook() {
+	this->contactAmmount = 0;
+	this->contactOldest = 0;
+}
+
+PhoneBook::~PhoneBook()
+{
 }
 
 int	main(void)
