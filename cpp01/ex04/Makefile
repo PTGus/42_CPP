@@ -6,7 +6,7 @@
 #    By: gumendes <gumendes@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/08/04 10:58:56 by gumendes          #+#    #+#              #
-#    Updated: 2025/08/04 17:12:26 by gumendes         ###   ########.fr        #
+#    Updated: 2025/08/06 12:01:46 by gumendes         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,7 +36,7 @@ NAME		=	sedIsForLosers
 #                                  SOURCE AND OBJECT FILES                     #
 #==============================================================================#
 
-SRCS		=	HumanA.cpp HumanB.cpp main.cpp Weapon.cpp
+SRCS		=	main.cpp Manip.cpp
 
 OBJ			=	$(SRCS:%.cpp=$(BUILD_PATH)/%.o)
 
