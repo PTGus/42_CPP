@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   phonebook.hpp                                      :+:      :+:    :+:   */
+/*   Phonebook.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gumendes <gumendes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/30 11:41:17 by gumendes          #+#    #+#             */
-/*   Updated: 2025/08/04 13:58:49 by gumendes         ###   ########.fr       */
+/*   Updated: 2025/08/18 14:23:26 by gumendes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 #include <iomanip>
 #include <string>
 #include <cstdlib>
-#include "contact.hpp"
+#include "Contact.hpp"
 
 #define GREEN   "\033[32m"
 #define RED     "\033[31m"
