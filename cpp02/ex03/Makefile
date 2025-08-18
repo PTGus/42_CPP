@@ -5,8 +5,8 @@
 #                                                     +:+ +:+         +:+      #
 #    By: gumendes <gumendes@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2025/07/28 10:59:42 by gumendes          #+#    #+#              #
-#    Updated: 2025/08/07 15:08:32 by gumendes         ###   ########.fr        #
+#    Created: 2025/08/04 10:58:56 by gumendes          #+#    #+#              #
+#    Updated: 2025/08/06 16:05:47 by gumendes         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,13 +30,13 @@ BUILD_PATH	=   .build
 #                                  PROJECT NAME                                #
 #==============================================================================#
 
-NAME		=	phonebook
+NAME		=	fixed
 
 #==============================================================================#
 #                                  SOURCE AND OBJECT FILES                     #
 #==============================================================================#
 
-SRCS		=	phonebook.cpp contact.cpp
+SRCS		=	main.cpp Fixed.cpp
 
 OBJ			=	$(SRCS:%.cpp=$(BUILD_PATH)/%.o)
 
@@ -48,7 +48,7 @@ all: $(NAME)
 
 # Build the program
 $(NAME): $(OBJ)
-	@$(CC) $(CFLAGS) -o $(NAME) $(OBJ) -I.
+	@$(CC) $(CFLAGS) -o $(NAME) $(OBJ)
 	@echo "$(GRN)[PROJECT BUILT]$(END)"
 
 # Rule to create object files in the .build folder
