@@ -1,44 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
+/*   DiamondTrap.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gumendes <gumendes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/18 15:57:38 by gumendes          #+#    #+#             */
-/*   Updated: 2025/08/19 17:03:15 by gumendes         ###   ########.fr       */
+/*   Created: 2025/08/19 16:55:19 by gumendes          #+#    #+#             */
+/*   Updated: 2025/08/19 17:20:24 by gumendes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SCAVTRAP_HPP
-#define SCAVTRAP_HPP
+#ifndef DIAMONDTRAP_HPP
+#define DIAMONDTRAP_HPP
 
-#include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 
-class ScavTrap : public ClapTrap
+class DiamondTrap : public ScavTrap, public FragTrap
 {
 
 private:
 
 
-	bool	guardingGate;
+	std::string	name;
 
 public:
 
 
 	// Constructors //
-	ScavTrap(std::string newName);
-	ScavTrap(const ScavTrap& toCopy);
+	DiamondTrap(std::string newName);
+	DiamondTrap(const DiamondTrap& toCopy);
 
 	// Deconstructors //
-	~ScavTrap();
+	~DiamondTrap();
 
 	// Copy assignment overload //
-	ScavTrap& operator=(const ScavTrap& toCopy);
+	DiamondTrap& operator=(const DiamondTrap& toCopy);
 
 	// Public methods //
-	void	guardGate();
 	void	attack(const std::string& target);
+	void	whoAmI();
 
 };
 

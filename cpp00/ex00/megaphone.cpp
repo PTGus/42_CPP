@@ -6,7 +6,7 @@
 /*   By: gumendes <gumendes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/28 11:13:13 by gumendes          #+#    #+#             */
-/*   Updated: 2025/08/18 14:23:55 by gumendes         ###   ########.fr       */
+/*   Updated: 2025/08/19 15:32:09 by gumendes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,7 @@ int	main(int ac, char **av)
 		for (i = 1; i < ac; i++)
 		{
 			for (int j = 0; av[i][j] != '\0'; j++)
-			{
-				if (av[i][j] >= 97 && av[i][j] <= 122)
-					av[i][j] -= 32;
-			}
+				av[i][j] = toupper(av[i][j]);
 		}
 		for (i = 1; i < ac; i++)
 		{
