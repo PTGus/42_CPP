@@ -6,7 +6,7 @@
 /*   By: gumendes <gumendes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/18 17:11:37 by gumendes          #+#    #+#             */
-/*   Updated: 2025/08/19 16:38:24 by gumendes         ###   ########.fr       */
+/*   Updated: 2025/08/21 10:00:34 by gumendes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ FragTrap::FragTrap(std::string newName)
 
 FragTrap::~FragTrap()
 {
-	std::cout << "FragTrap Default deconstructor called" << std::endl;
+	std::cout << "FragTrap Default Destructor called" << std::endl;
 }
 
 FragTrap::FragTrap(const FragTrap& toCopy)

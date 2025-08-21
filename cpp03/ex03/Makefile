@@ -6,7 +6,7 @@
 #    By: gumendes <gumendes@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/08/04 10:58:56 by gumendes          #+#    #+#              #
-#    Updated: 2025/08/19 16:54:23 by gumendes         ###   ########.fr        #
+#    Updated: 2025/08/21 10:09:50 by gumendes         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ MAKEFLAGS += --no-print-directory
 
 CC			=	c++
 RM			=	rm -rf
-CFLAGS		=	-Wall -Wextra -Werror -std=c++98
+CFLAGS		=	-Wall -Wextra -Werror -Wshadow -std=c++98
 
 #==============================================================================#
 #                                  PATHS       					               #
@@ -36,7 +36,7 @@ NAME		=	DiamondTrap
 #                                  SOURCE AND OBJECT FILES                     #
 #==============================================================================#
 
-SRCS		=	ClapTrap.cpp main.cpp ScavTrap.cpp
+SRCS		=	ClapTrap.cpp DiamondTrap.cpp main.cpp FragTrap.cpp ScavTrap.cpp
 
 OBJ			=	$(SRCS:%.cpp=$(BUILD_PATH)/%.o)
 

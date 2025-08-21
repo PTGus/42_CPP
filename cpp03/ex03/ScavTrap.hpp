@@ -6,7 +6,7 @@
 /*   By: gumendes <gumendes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/18 15:57:38 by gumendes          #+#    #+#             */
-/*   Updated: 2025/08/19 17:15:11 by gumendes         ###   ########.fr       */
+/*   Updated: 2025/08/21 10:03:06 by gumendes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 class ScavTrap : virtual public ClapTrap
 {
 
-private:
+protected:
 
 
 	bool	guardingGate;
@@ -31,7 +31,7 @@ public:
 	ScavTrap(std::string newName);
 	ScavTrap(const ScavTrap& toCopy);
 
-	// Deconstructors //
+	// Destructors //
 	~ScavTrap();
 
 	// Copy assignment overload //

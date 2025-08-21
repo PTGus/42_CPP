@@ -6,7 +6,7 @@
 /*   By: gumendes <gumendes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/18 16:07:50 by gumendes          #+#    #+#             */
-/*   Updated: 2025/08/19 16:35:16 by gumendes         ###   ########.fr       */
+/*   Updated: 2025/08/21 10:00:34 by gumendes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ ScavTrap::ScavTrap(std::string newName)
 
 ScavTrap::~ScavTrap()
 {
-	std::cout << "ScavTrap Default deconstructor called" << std::endl;
+	std::cout << "ScavTrap Default Destructor called" << std::endl;
 }
 
 ScavTrap::ScavTrap(const ScavTrap& toCopy)

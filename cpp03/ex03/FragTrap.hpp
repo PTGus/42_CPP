@@ -6,7 +6,7 @@
 /*   By: gumendes <gumendes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/18 17:11:44 by gumendes          #+#    #+#             */
-/*   Updated: 2025/08/19 17:15:14 by gumendes         ###   ########.fr       */
+/*   Updated: 2025/08/21 10:00:34 by gumendes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ public:
 	FragTrap(std::string newName);
 	FragTrap(const FragTrap& toCopy);
 
-	// Deconstructors //
+	// Destructors //
 	~FragTrap();
 
 	// Copy assignment overload //

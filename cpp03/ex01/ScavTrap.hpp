@@ -6,7 +6,7 @@
 /*   By: gumendes <gumendes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/18 15:57:38 by gumendes          #+#    #+#             */
-/*   Updated: 2025/08/18 17:17:32 by gumendes         ###   ########.fr       */
+/*   Updated: 2025/08/21 10:00:34 by gumendes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ public:
 	ScavTrap(std::string newName);
 	ScavTrap(const ScavTrap& toCopy);
 
-// Deconstructors //
+// Destructors //
 	~ScavTrap();
 
 // Copy assignment overload //

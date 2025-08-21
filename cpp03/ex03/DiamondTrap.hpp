@@ -6,7 +6,7 @@
 /*   By: gumendes <gumendes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/19 16:55:19 by gumendes          #+#    #+#             */
-/*   Updated: 2025/08/19 17:20:24 by gumendes         ###   ########.fr       */
+/*   Updated: 2025/08/21 10:00:34 by gumendes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,14 +31,14 @@ public:
 	DiamondTrap(std::string newName);
 	DiamondTrap(const DiamondTrap& toCopy);
 
-	// Deconstructors //
+	// Destructors //
 	~DiamondTrap();
 
 	// Copy assignment overload //
 	DiamondTrap& operator=(const DiamondTrap& toCopy);
 
 	// Public methods //
-	void	attack(const std::string& target);
+	using	ScavTrap::attack;
 	void	whoAmI();
 
 };

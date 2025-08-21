@@ -6,7 +6,7 @@
 /*   By: gumendes <gumendes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/18 15:23:14 by gumendes          #+#    #+#             */
-/*   Updated: 2025/08/19 17:12:41 by gumendes         ###   ########.fr       */
+/*   Updated: 2025/08/21 10:10:39 by gumendes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ ClapTrap::ClapTrap()
 
 ClapTrap::ClapTrap(std::string newName) : name(newName)
 {
-	std::cout << "ClapTrap Named constructor called" << std::endl;
+	std::cout << "ClapTrap Default constructor called" << std::endl;
 	hitPoints = 10;
 	energyPoints = 10;
 	attackDamage = 0;
@@ -27,7 +27,7 @@ ClapTrap::ClapTrap(std::string newName) : name(newName)
 
 ClapTrap::~ClapTrap()
 {
-	std::cout << "ClapTrap Default deconstructor called" << std::endl;
+	std::cout << "ClapTrap Default Destructor called" << std::endl;
 }
 
 ClapTrap::ClapTrap(const ClapTrap& toCopy)
