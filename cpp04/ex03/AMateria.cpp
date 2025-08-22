@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Materia.cpp                                        :+:      :+:    :+:   */
+/*   AMateria.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gumendes <gumendes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/21 14:56:54 by gumendes          #+#    #+#             */
-/*   Updated: 2025/08/21 15:24:22 by gumendes         ###   ########.fr       */
+/*   Updated: 2025/08/22 13:16:46 by gumendes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Materia.hpp"
+#include "AMateria.hpp"
 
 AMateria::AMateria(const std::string& type) : _type("type")
 {
@@ -26,4 +26,16 @@ AMateria::AMateria(const AMateria& toCopy)
 AMateria::~AMateria()
 {
 	// std::cout << "AMateria Default Destructor called for spell type: " << type << std::endl;
+}
+
+AMateria& AMateria::operator=(const AMateria& toCopy)
+{
+	if (this != &toCopy)
+		this->_type = toCopy._type;
+	return (*this);
+}
+
+const std::string& AMateria::getType() const
+{
+	return (_type);
 }

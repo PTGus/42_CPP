@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Materia.hpp                                        :+:      :+:    :+:   */
+/*   AMateria.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gumendes <gumendes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/21 14:27:27 by gumendes          #+#    #+#             */
-/*   Updated: 2025/08/21 15:00:21 by gumendes         ###   ########.fr       */
+/*   Updated: 2025/08/22 13:04:46 by gumendes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 #include <iostream>
 #include <string>
-#include "Character.hpp"
+#include "ICharacter.hpp"
 
 class AMateria
 {
@@ -39,15 +39,5 @@ public:
 	std::string const & getType() const;
 	virtual AMateria* clone() const = 0;
 	virtual void use(ICharacter& target);
-
-};
-
-class Ice : public AMateria
-{
-
-};
-
-class Cure : public AMateria
-{
 
 };
