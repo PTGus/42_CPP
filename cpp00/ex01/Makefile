@@ -6,7 +6,7 @@
 #    By: gumendes <gumendes@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/07/28 10:59:42 by gumendes          #+#    #+#              #
-#    Updated: 2025/08/07 15:08:32 by gumendes         ###   ########.fr        #
+#    Updated: 2025/09/08 11:40:34 by gumendes         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,7 +36,7 @@ NAME		=	phonebook
 #                                  SOURCE AND OBJECT FILES                     #
 #==============================================================================#
 
-SRCS		=	phonebook.cpp contact.cpp
+SRCS		=	Phonebook.cpp Contact.cpp
 
 OBJ			=	$(SRCS:%.cpp=$(BUILD_PATH)/%.o)
 

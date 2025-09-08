@@ -6,7 +6,7 @@
 #    By: gumendes <gumendes@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/08/04 10:58:56 by gumendes          #+#    #+#              #
-#    Updated: 2025/09/08 11:44:59 by gumendes         ###   ########.fr        #
+#    Updated: 2025/09/08 11:43:55 by gumendes         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,13 +30,13 @@ BUILD_PATH	=   .build
 #                                  PROJECT NAME                                #
 #==============================================================================#
 
-NAME		=	FragTrap
+NAME		=	BSP
 
 #==============================================================================#
 #                                  SOURCE AND OBJECT FILES                     #
 #==============================================================================#
 
-SRCS		=	ClapTrap.cpp FragTrap.cpp main.cpp ScavTrap.cpp
+SRCS		=	bsp.cpp Fixed.cpp main.cpp Point.cpp
 
 OBJ			=	$(SRCS:%.cpp=$(BUILD_PATH)/%.o)
 

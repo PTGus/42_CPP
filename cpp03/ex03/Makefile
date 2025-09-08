@@ -6,7 +6,7 @@
 #    By: gumendes <gumendes@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/08/04 10:58:56 by gumendes          #+#    #+#              #
-#    Updated: 2025/08/21 10:09:50 by gumendes         ###   ########.fr        #
+#    Updated: 2025/09/08 11:45:34 by gumendes         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,7 +36,7 @@ NAME		=	DiamondTrap
 #                                  SOURCE AND OBJECT FILES                     #
 #==============================================================================#
 
-SRCS		=	ClapTrap.cpp DiamondTrap.cpp main.cpp FragTrap.cpp ScavTrap.cpp
+SRCS		=	ClapTrap.cpp DiamondTrap.cpp FragTrap.cpp main.cpp ScavTrap.cpp
 
 OBJ			=	$(SRCS:%.cpp=$(BUILD_PATH)/%.o)
 

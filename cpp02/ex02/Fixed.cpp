@@ -6,11 +6,11 @@
 /*   By: gumendes <gumendes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/06 15:26:40 by gumendes          #+#    #+#             */
-/*   Updated: 2025/08/18 14:06:59 by gumendes         ###   ########.fr       */
+/*   Updated: 2025/09/08 11:41:10 by gumendes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Point.hpp"
+#include "Fixed.hpp"
 
 const int	Fixed::fractionalBits = 8;
 
