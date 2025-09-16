@@ -6,7 +6,7 @@
 /*   By: gumendes <gumendes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/21 14:27:27 by gumendes          #+#    #+#             */
-/*   Updated: 2025/08/22 13:04:46 by gumendes         ###   ########.fr       */
+/*   Updated: 2025/09/08 12:03:59 by gumendes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ protected:
 public:
 
 	// Constructors //
+	AMateria();
 	AMateria(const std::string& type);
 	AMateria(const AMateria& toCopy);
 

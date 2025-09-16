@@ -6,13 +6,18 @@
 /*   By: gumendes <gumendes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/21 14:56:54 by gumendes          #+#    #+#             */
-/*   Updated: 2025/08/22 13:16:46 by gumendes         ###   ########.fr       */
+/*   Updated: 2025/09/08 14:25:44 by gumendes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "AMateria.hpp"
 
-AMateria::AMateria(const std::string& type) : _type("type")
+AMateria::AMateria(): _type("Unknown")
+{
+	// std::cout << "AMateria Default Constructor called << std::endl;
+}
+
+AMateria::AMateria(const std::string& type) : _type(type)
 {
 	// std::cout << "AMateria Default Constructor called for spell type: " << type << std::endl;
 }
@@ -25,7 +30,7 @@ AMateria::AMateria(const AMateria& toCopy)
 
 AMateria::~AMateria()
 {
-	// std::cout << "AMateria Default Destructor called for spell type: " << type << std::endl;
+	// std::cout << "AMateria Default Destructor called for spell type: " << _type << std::endl;
 }
 
 AMateria& AMateria::operator=(const AMateria& toCopy)
@@ -38,4 +43,10 @@ AMateria& AMateria::operator=(const AMateria& toCopy)
 const std::string& AMateria::getType() const
 {
 	return (_type);
+}
+
+void AMateria::use(ICharacter& target)
+{
+	(void)target;
+	std::cout << "* generic magical effect happens *" << std::endl;
 }

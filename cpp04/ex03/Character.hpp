@@ -6,7 +6,7 @@
 /*   By: gumendes <gumendes@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/21 14:42:21 by gumendes          #+#    #+#             */
-/*   Updated: 2025/08/22 13:01:18 by gumendes         ###   ########.fr       */
+/*   Updated: 2025/09/08 14:29:27 by gumendes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 #include <iostream>
 #include <string>
 #include "AMateria.hpp"
+#include "ICharacter.hpp"
 
 class Character : public ICharacter
 {
@@ -23,7 +24,7 @@ private:
 
 
 	std::string	_name;
-	AMateria	_spells[4];
+	AMateria	*_spells[4];
 
 public:
 
@@ -38,7 +39,8 @@ public:
 // Copy Assignment Overload //
 	Character& operator=(const Character& toCopy);
 
-// Public Methods //
+// Interface Methods //
+	std::string const & getName() const;
 	void equip(AMateria* m);
 	void unequip(int idx);
 	void use(int idx, ICharacter& target);
